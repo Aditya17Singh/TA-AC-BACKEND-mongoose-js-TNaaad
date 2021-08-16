@@ -1,17 +1,15 @@
 var express = require('express');
-var logger = require('morgan');
 var mongoose = require("mongoose")
 
 //connect to database
-mongoose.connect("mongodb://localhost:127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb" , (err) => {
+mongoose.connect("mongodb://localhost/sample" , 
+{useNewUrlParser: true ,useUnifiedTopology: true},
+(err) => {
     console.log(err ? err : "connected to database");
 })
 
 
 var app = express();
-
-//middleware
-app.use(logger('dev'));
 
 
 //routes
