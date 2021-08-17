@@ -3,11 +3,7 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
     name : String,
-    age: Number,
-    isAdmin: Boolean,
-    createdAt: Date,
+    email:{type: String , lowercase: true},
+    age: {type:Number , default: 0},
 },{timestamps: true})
 
-var userSchema = new Schema({
-    name: {type: String , lowercase: true}
-})
