@@ -7,9 +7,10 @@ var userSchema = new Schema({
     email:{type: String , lowercase: true},
     age: {type:Number , default: 0},
     password:{type: String , minlength: 5},
-    createdAt: {type: Date , default: new Date()},
+    // createdAt: {type: Date , default: new Date()},
     favourite: [String]
-},{timestamps: true})
-var user = mongoose.model('User' , userSchema)
+}, {timestamps: true})
 
-module.exports = user;
+var User = mongoose.model('User' , userSchema)
+
+module.exports = User;

@@ -10,6 +10,6 @@ var articleSchema = new Schema({
     likes: {type: Number, default: 0},
 })
 
-var article = mongoose.model('Article' , articleSchema);
+var Article = mongoose.model('Article' , articleSchema);
 
-module.exports = article;
+module.exports = Article;
