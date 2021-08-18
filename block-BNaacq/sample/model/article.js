@@ -8,7 +8,7 @@ var articleSchema = new Schema({
     tags: String,
     likes: {type: Number , default: 0},
     author: Schema.Types.ObjectId,
-    comments: String,
+    comments: [String],
 }, {timestamps: true});
 
 var article = mongoose.model('Article' , articleSchema);

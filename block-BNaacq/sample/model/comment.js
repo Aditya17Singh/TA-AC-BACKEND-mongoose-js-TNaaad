@@ -1,10 +1,11 @@
 var require = require('mongoose');
+const user = require('./user');
 
 var Schema = mongoose.Schema;
 
 var commentSchema = new Schema({
     content: String,
-    author: Schema.Types.ObjectId,
+    author: {type:Schema.Types.ObjectId , ref: "User"},
     article: String,
 } , {timestamps: true});
 
